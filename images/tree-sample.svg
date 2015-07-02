@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created by diasvg.py -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="750"
+   height="450"
+   viewBox="0.875 0.875 22.038235 16.717347"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="tree-sample.svg">
+  <metadata
+     id="metadata62">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs60" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="744"
+     id="namedview58"
+     showgrid="false"
+     inkscape:zoom="1.168255"
+     inkscape:cx="424.70768"
+     inkscape:cy="210.607"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <path
+     d="m 1.833,7.5923473 3.334,0 c 0.46,0 0.833,0.672 0.833,1.5 0,0.828 -0.373,1.4999997 -0.833,1.4999997 l -3.334,0 C 1.373,10.592347 1,9.9203473 1,9.0923473 c 0,-0.828 0.373,-1.5 0.833,-1.5"
+     id="path4"
+     inkscape:connector-curvature="0"
+     style="fill:#68c668;stroke:none" />
+  <path
+     d="m 1.833,7.5923473 3.334,0 c 0.46,0 0.833,0.672 0.833,1.5 0,0.828 -0.373,1.4999997 -0.833,1.4999997 l -3.334,0 C 1.373,10.592347 1,9.9203473 1,9.0923473 c 0,-0.828 0.373,-1.5 0.833,-1.5"
+     id="path6"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#559e55;stroke-width:0.25" />
+  <text
+     x="3.5"
+     y="9.462347"
+     font-size="1.06"
+     font-style="normal"
+     font-weight="600"
+     id="text8"
+     style="font-size:1.05999994px;font-style:normal;font-weight:600;text-anchor:middle;fill:#ffffff;font-family:Source Code Pro for Powerline">fad4c</text>
+  <path
+     d="m 9.833,7.5923473 3.334,0 c 0.46,0 0.833,0.672 0.833,1.5 0,0.828 -0.373,1.4999997 -0.833,1.4999997 l -3.334,0 C 9.373,10.592347 9,9.9203473 9,9.0923473 c 0,-0.828 0.373,-1.5 0.833,-1.5"
+     id="path10"
+     inkscape:connector-curvature="0"
+     style="fill:#68c668;stroke:none" />
+  <path
+     d="m 9.833,7.5923473 3.334,0 c 0.46,0 0.833,0.672 0.833,1.5 0,0.828 -0.373,1.4999997 -0.833,1.4999997 l -3.334,0 C 9.373,10.592347 9,9.9203473 9,9.0923473 c 0,-0.828 0.373,-1.5 0.833,-1.5"
+     id="path12"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#559e55;stroke-width:0.25" />
+  <text
+     x="11.5"
+     y="9.462347"
+     font-size="1.06"
+     font-style="normal"
+     font-weight="600"
+     id="text14"
+     style="font-size:1.05999994px;font-style:normal;font-weight:600;text-anchor:middle;fill:#ffffff;font-family:Source Code Pro for Powerline">96aa1</text>
+  <path
+     d="m 17.833,13.592347 3.334,0 c 0.46,0 0.833,0.672 0.833,1.5 0,0.828 -0.373,1.5 -0.833,1.5 l -3.334,0 c -0.46,0 -0.833,-0.672 -0.833,-1.5 0,-0.828 0.373,-1.5 0.833,-1.5"
+     id="path16"
+     inkscape:connector-curvature="0"
+     style="fill:#b552b5;stroke:none" />
+  <path
+     d="m 17.833,13.592347 3.334,0 c 0.46,0 0.833,0.672 0.833,1.5 0,0.828 -0.373,1.5 -0.833,1.5 l -3.334,0 c -0.46,0 -0.833,-0.672 -0.833,-1.5 0,-0.828 0.373,-1.5 0.833,-1.5"
+     id="path18"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#895089;stroke-width:0.25" />
+  <text
+     x="19.5"
+     y="15.462347"
+     font-size="1.06"
+     font-style="normal"
+     font-weight="600"
+     id="text20"
+     style="font-size:1.05999994px;font-style:normal;font-weight:600;text-anchor:middle;fill:#ffffff;font-family:Source Code Pro for Powerline">dfc0a</text>
+  <path
+     d="m 17.833,7.5923473 3.334,0 c 0.46,0 0.833,0.672 0.833,1.5 0,0.828 -0.373,1.4999997 -0.833,1.4999997 l -3.334,0 c -0.46,0 -0.833,-0.6719997 -0.833,-1.4999997 0,-0.828 0.373,-1.5 0.833,-1.5"
+     id="path22"
+     inkscape:connector-curvature="0"
+     style="fill:#68c668;stroke:none" />
+  <path
+     d="m 17.833,7.5923473 3.334,0 c 0.46,0 0.833,0.672 0.833,1.5 0,0.828 -0.373,1.4999997 -0.833,1.4999997 l -3.334,0 c -0.46,0 -0.833,-0.6719997 -0.833,-1.4999997 0,-0.828 0.373,-1.5 0.833,-1.5"
+     id="path24"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#559e55;stroke-width:0.25" />
+  <text
+     x="19.5"
+     y="9.462347"
+     font-size="1.06"
+     font-style="normal"
+     font-weight="600"
+     id="text26"
+     style="font-size:1.05999994px;font-style:normal;font-weight:600;text-anchor:middle;fill:#ffffff;font-family:Source Code Pro for Powerline">af50e</text>
+  <line
+     x1="9"
+     y1="9.0923471"
+     x2="6.6550002"
+     y2="9.0923471"
+     id="line28"
+     style="stroke:#bfbfbf;stroke-width:0.25" />
+  <polygon
+     points="6.28,8.5 6.78,8.25 6.655,8.5 6.78,8.75 "
+     id="polygon30"
+     style="fill:#bfbfbf;stroke:none"
+     transform="translate(0,0.59234724)" />
+  <polygon
+     points="6.28,8.5 6.78,8.25 6.655,8.5 6.78,8.75 "
+     id="polygon32"
+     style="fill:none;stroke:#bfbfbf;stroke-width:0.25"
+     transform="translate(0,0.59234724)" />
+  <line
+     x1="17"
+     y1="9.0923471"
+     x2="14.655"
+     y2="9.0923471"
+     id="line34"
+     style="stroke:#bfbfbf;stroke-width:0.25" />
+  <polygon
+     points="14.28,8.5 14.78,8.25 14.655,8.5 14.78,8.75 "
+     id="polygon36"
+     style="fill:#bfbfbf;stroke:none"
+     transform="translate(0,0.59234724)" />
+  <polygon
+     points="14.28,8.5 14.78,8.25 14.655,8.5 14.78,8.75 "
+     id="polygon38"
+     style="fill:none;stroke:#bfbfbf;stroke-width:0.25"
+     transform="translate(0,0.59234724)" />
+  <line
+     x1="16.923"
+     y1="15.029347"
+     x2="12.007"
+     y2="11.006347"
+     id="line40"
+     style="stroke:#bfbfbf;stroke-width:0.25" />
+  <polygon
+     points="11.716,10.177 12.262,10.3 12.007,10.414 11.945,10.687 "
+     id="polygon42"
+     style="fill:#bfbfbf;stroke:none"
+     transform="translate(0,0.59234724)" />
+  <polygon
+     points="11.716,10.177 12.262,10.3 12.007,10.414 11.945,10.687 "
+     id="polygon44"
+     style="fill:none;stroke:#bfbfbf;stroke-width:0.25"
+     transform="translate(0,0.59234724)" />
+  <path
+     d="m 9.833,1.5923473 3.334,0 c 0.46,0 0.833,0.672 0.833,1.5 0,0.828 -0.373,1.5 -0.833,1.5 l -3.334,0 c -0.46,0 -0.833,-0.672 -0.833,-1.5 0,-0.828 0.373,-1.5 0.833,-1.5"
+     id="path46"
+     inkscape:connector-curvature="0"
+     style="fill:#4d4d4d;stroke:none" />
+  <path
+     d="m 9.833,1.5923473 3.334,0 c 0.46,0 0.833,0.672 0.833,1.5 0,0.828 -0.373,1.5 -0.833,1.5 l -3.334,0 c -0.46,0 -0.833,-0.672 -0.833,-1.5 0,-0.828 0.373,-1.5 0.833,-1.5"
+     id="path48"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#272727;stroke-width:0.25" />
+  <text
+     x="11.5"
+     y="3.462347"
+     font-size="1.06"
+     font-style="normal"
+     font-weight="600"
+     id="text50"
+     style="font-size:1.05999994px;font-style:normal;font-weight:600;text-anchor:middle;fill:#ffffff;font-family:Source Code Pro for Powerline">c34a6</text>
+  <line
+     x1="9"
+     y1="3.0923471"
+     x2="4.007"
+     y2="7.1783471"
+     id="line52"
+     style="stroke:#bfbfbf;stroke-width:0.25" />
+  <polygon
+     points="3.716,6.823 3.945,6.313 4.007,6.586 4.262,6.7 "
+     id="polygon54"
+     style="fill:#bfbfbf;stroke:none"
+     transform="translate(0,0.59234724)" />
+  <polygon
+     points="3.716,6.823 3.945,6.313 4.007,6.586 4.262,6.7 "
+     id="polygon56"
+     style="fill:none;stroke:#bfbfbf;stroke-width:0.25"
+     transform="translate(0,0.59234724)" />
+  <g
+     id="g3825"
+     transform="translate(10.907151,4.0266688)">
+    <rect
+       rx="0.54058766"
+       ry="1.3355694"
+       y="1.2593598"
+       x="16.204313"
+       height="2.6711388"
+       width="5.1514821"
+       id="rect3039"
+       style="fill:#68c668;fill-opacity:1;stroke:#559e55;stroke-width:0.22289796;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3813"
+       y="3.0145719"
+       x="18.759018"
+       style="font-size:1.18878913px;font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Source Code Pro for Powerline;-inkscape-font-specification:Source Code Pro for Powerline Semi-Bold"
+       xml:space="preserve"><tspan
+         y="3.0145719"
+         x="18.759018"
+         id="tspan3815"
+         sodipodi:role="line">fad4c</tspan></text>
+  </g>
+</svg>
