@@ -117,29 +117,42 @@
                     <section>
                         <h2>Directed Acyclic Graph</h2>
 
-                        <p>
+                        <h3>
                             A <strong class="green">DAG</strong>, is a <strong class="fragment highlight-green">directed graph</strong> with <strong class="fragment highlight-green">no directed cycles</strong>.
-                        </p>
+                        </h3>
+                    </section>
 
-                        <p>
+                    <section>
+                        <h3>
                             Formed by a collection of <strong class="fragment highlight-green">nodes</strong> and <strong class="fragment highlight-green">directed edges</strong> that connect them.
-                        </p>
+                        </h3>
+
+                        <img src="/images/dag-nodes-edges.svg">
 
                         <p>
                             <strong class="fragment highlight-green">There is no way to start at some node N and cycle back again to N.</strong>
                         </p>
+                    </section>
 
-                        <p>
-                            The difference with a tree is that <strong class="fragment highlight-green grow">nodes in a DAG can have multiple parents</strong>The most common case of this in git is when you do a merge. <strong class="fragment highlight-green">A merge commit will have all of the commits that were merged as parents.</strong>
-                        </p>
+                    <section>
+                        <h3>
+                            The difference with a tree is that <strong class="fragment highlight-green grow">nodes in a DAG can have multiple parents</strong>.
+                        </h3>
 
-                        <h3 class="fragment fade-in">
-                            A tree doesn't allow nodes to have multiple parents.
+                        <h3 class="fragment">
+                            <strong>A tree doesn't allow nodes to have multiple parents.</strong>
+                        </h3>
+                    </section>
+
+                    <section>
+                        <h3>
+                            The most common case of this in git is when you do a merge. <strong class="fragment highlight-green">A merge commit will have all of the commits that were merged as parents.</strong>
                         </h3>
                     </section>
 
                     <section>
                         <h2>This is a <strong>tree</strong></h2>
+                        <p><em>(Polytree actually &mdash;directed tree)</em></p>
                         <img src="/images/tree-sample.svg">
                         <h3>Only one parent per node</h3>
                     </section>
@@ -147,7 +160,7 @@
                     <section>
                         <h2>This is a <strong>DAG</strong></h2>
                         <img src="/images/dag-sample.svg">
-                        <h3>Here's a node with two parents</h3>
+                        <h3>The <strong class="blue">blue node</strong> represents a <strong class="green">merge commit</strong></h3>
                     </section>
                 </section>
 
