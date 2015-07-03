@@ -23,8 +23,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.70710678"
-     inkscape:cx="381.66448"
-     inkscape:cy="272.56887"
+     inkscape:cx="475.00258"
+     inkscape:cy="162.26021"
      inkscape:document-units="px"
      inkscape:current-layer="g8454"
      showgrid="false"
@@ -38,7 +38,11 @@
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
-     fit-margin-bottom="0" />
+     fit-margin-bottom="0"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true" />
   <defs
      id="defs6290">
     <marker
@@ -162,7 +166,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -367,25 +371,6 @@
            y="928.47418">File B</tspan></text>
       <rect
          ry="20.512144"
-         y="900.90082"
-         x="462.60568"
-         height="41.024288"
-         width="116.93889"
-         id="rect6974"
-         style="fill:#b3b3b3;fill-opacity:1;stroke:none" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text6976"
-         y="928.47418"
-         x="522.6626"
-         style="font-size:18.79328917999999859px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#4d4d4d;fill-opacity:1;stroke:none;font-family:Roboto Condensed;-inkscape-font-specification:'Roboto Condensed, Condensed'"
-         xml:space="preserve"><tspan
-           y="928.47418"
-           x="522.6626"
-           id="tspan6978"
-           sodipodi:role="line">Δ1</tspan></text>
-      <rect
-         ry="20.512144"
          y="960.90082"
          x="24.380335"
          height="41.024288"
@@ -461,16 +446,6 @@
            sodipodi:role="line"
            id="tspan7016">Δ3</tspan></text>
       <path
-         style="fill:none;stroke:#808080;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-end:url(#Arrow2Send7)"
-         d="m 141.31922,921.41296 321.28646,0"
-         id="path7020"
-         inkscape:connector-type="polyline"
-         inkscape:connector-curvature="0"
-         inkscape:connection-start="#rect6956"
-         inkscape:connection-start-point="d4"
-         inkscape:connection-end="#rect6974"
-         inkscape:connection-end-point="d4" />
-      <path
          style="fill:none;stroke:#808080;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-end:url(#Arrow2Sendw)"
          d="m 141.31922,861.41296 29.13621,0"
          id="path7022"
@@ -537,6 +512,35 @@
            x="356.8049"
            id="tspan7812"
            sodipodi:role="line">Time</tspan></text>
+      <rect
+         style="fill:#b3b3b3;fill-opacity:1;stroke:none"
+         id="rect3055"
+         width="116.93889"
+         height="41.024288"
+         x="316.53055"
+         y="900.90082"
+         ry="20.512144" />
+      <text
+         xml:space="preserve"
+         style="font-size:18.79328918px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#4d4d4d;fill-opacity:1;stroke:none;font-family:Roboto Condensed;-inkscape-font-specification:'Roboto Condensed, Condensed'"
+         x="376.58746"
+         y="928.47418"
+         id="text3057"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3059"
+           x="376.58746"
+           y="928.47418">Δ1</tspan></text>
+      <path
+         style="fill:none;stroke:#808080;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-end:url(#Arrow2Send7);display:inline"
+         d="m 141.31922,921.41296 175.21133,0"
+         id="path7020"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+         inkscape:connection-start="#rect6956"
+         inkscape:connection-start-point="d4"
+         inkscape:connection-end="#rect3055"
+         inkscape:connection-end-point="d4" />
     </g>
   </g>
 </svg>
