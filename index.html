@@ -371,11 +371,7 @@ a new line</code></pre>
                         </h2>
 
                         <h3 class="fragment">
-                            A <strong class="green">commit</strong> points to a <strong class="green">tree</strong> that represents the state of the Stage (or Index) at the time of the commit.
-                        </h3>
-
-                        <h3 class="fragment">
-                            A <strong class="green">tree</strong> can reference <strong class="green">other trees</strong> and <strong class="green">blobs</strong>. It also stores the <strong class="green">filename</strong> that correspond to each tree and blob.
+                            A <strong class="green">tree</strong> references <strong class="green">other trees</strong> and <strong class="green">blobs</strong>. It also stores the <strong class="green">filename</strong> that correspond to each tree and blob it contains.
                         </h3>
                     </section>
 
@@ -383,6 +379,10 @@ a new line</code></pre>
                         <h3>This is what a <strong class="green">tree</strong> looks like</h3>
 
                         <img src="/images/tree-graph.svg">
+                    </section>
+
+                    <section>
+                        <h3>And this is what a tree file actually stores</h3>
 
                         <table>
                             <thead>
@@ -413,9 +413,14 @@ a new line</code></pre>
                             Yes, it does look like a filesystem.
                         </h2>
 
+                        <h3>
+                            <span class="fragment">That's because</span>
+                            <span class="fragment">it's Git's representation of the files in the repository.</span>
+                        </h3>
+
                         <h3 class="fragment">
-                            A <strong class="green">tree</strong> is like a <strong class="green">directory</strong>
-                            <span class="fragment">and a <strong class="green">blob</strong> is like a <strong class="green">file</strong>.</span>
+                            A <strong class="green">tree</strong> is a <strong class="green">directory</strong>
+                            <span class="fragment">and a <strong class="green">blob</strong> is a <strong class="green">file</strong>.</span>
                         </h3>
                     </section>
 
