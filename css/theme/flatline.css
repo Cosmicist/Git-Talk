@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
 @import url(http://fonts.googleapis.com/css?family=Quicksand:400,700);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
 
 /**
  * Black theme for reveal.js.
@@ -128,13 +129,13 @@ body {
   margin: 20px auto;
   text-align: left;
   font-size: 0.55em;
-  font-family: monospace;
+  font-family: 'Inconsolata', monospace;
   line-height: 1.2em;
   word-wrap: break-word;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
 
 .reveal code {
-  font-family: monospace; }
+  font-family: 'Inconsolata', monospace; }
 
 .reveal pre code {
   display: block;
@@ -143,7 +144,9 @@ body {
   max-height: 400px;
   word-wrap: normal;
   background: #3F3F3F;
-  color: #DCDCDC; }
+  color: #DCDCDC;
+  font-size: 25px;
+  line-height: 1.3em; }
 
 .reveal table {
   margin: auto;
@@ -193,6 +196,28 @@ body {
 
 .reveal .blue {
   color: #4F65A8;
+}
+
+.reveal .red {
+  color: #CC3030;
+}
+
+.reveal .shadow {
+  text-shadow: 0 1px 5px #333;
+  text-shadow:
+                -1px -1px #333,
+                -1px 1px #333,
+                1px -1px #333,
+                1px 1px #333,
+                2px 2px #333,
+                3px 3px #333,
+                4px 4px #222,
+                5px 5px #222,
+                6px 6px #111,
+                7px 7px #111,
+                8px 8px #000,
+                8px 8px 6px #000,
+                8px 8px 12px #000;
 }
 
 /*********************************************
