@@ -287,7 +287,7 @@
 
                     <section>
                         <h3>
-                            The file it creates is called a <strong class="green">blob</strong>. It is the binary representation of any given content.
+                            The file it creates is called a <strong class="green">blob</strong>. It is the zlib-deflated representation of any given content.
                         </h3>
                         <h3 class="fragment">
                             Git uses blobs to save the different versions of your files.
@@ -346,7 +346,7 @@ testing blobs
 a new line</code></pre>
 
                         <aside class="notes" data-markdown>
-                            We use `git cat-file` because the blob file is actually a zlib-compressed binary, using regular `cat` would just output unreadable gibberish.
+                            We use `git cat-file` because the blob file is actually the zlib-deflated data, using regular `cat` would just output unreadable gibberish.
                         </aside>
                     </section>
 
