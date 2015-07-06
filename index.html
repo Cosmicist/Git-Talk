@@ -177,6 +177,11 @@
                     <section>
                         <h3>Most VCSs store only the <strong class="green">file changes</strong></h3>
                         <img src="/images/changes.svg">
+
+                        <aside class="notes">
+                            This is practical in terms of disk space, but is not performant and pretty fragile.
+                            We could easily loose data if the original file were to be corrupted.
+                        </aside>
                     </section>
 
                     <section>
@@ -185,6 +190,12 @@
                         <h4>
                             <strong>Efficient:</strong> If a file didn't change, a <strong class="green">link to the previous version</strong> is stored.
                         </h4>
+
+                        <aside class="notes">
+                            This may seem like it's not performant at all, but Git doesn't store a copy of every file on every commit. If a file didn't change, then just a link to the previous version will be stored. And checking out the files state is lightning fast.
+
+                            Git model is also more robust, but we'll see this later.
+                        </aside>
                     </section>
 
                 </section>
