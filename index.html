@@ -192,22 +192,170 @@
 
 
                 <!-- ### Trees, Blobs & Checksums ### -->
-
-
-
+                <section>
                     <!-- ### What's a commit made of? ### -->
+                    <section>
+                        <h2>What's a commit?</h2>
 
+                        <p class="fragment">
+                            A <strong class="green">commit</strong> contains <strong class="green">a snapshot of the files at a given point in time</strong>.
+                        </p>
+                    </section>
 
+                    <section>
+                        <h3>It also contains some information.</h3>
 
-                    <!-- ### Trees ### -->
+                        <ul>
+                            <li class="fragment">Id (hash)</li>
+                            <li class="fragment">Author</li>
+                            <li class="fragment">Committer</li>
+                            <li class="fragment">Comment</li>
+                            <li class="fragment">Parent commit (if any)</li>
+                            <li class="fragment">Tree</li>
+                            <li class="fragment">Date</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <p>Wait a second...</p>
+
+                        <h3 class="fragment green">Aren't Author &amp; Commiter the same thing?</h3>
+
+                        <h3 class="fragment">
+                            Actaully... <span class="fragment">no.</span>
+                        </h3>
+
+                        <p>
+                            <span class="fragment">They might be the same.</span>
+                            <span class="fragment">But mean different things.</span>
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>Ever seen this?</h2>
+
+                        <img src="/images/author-vs-commit.png">
+
+                        <aside class="notes" data-markdown>
+                            `Author` and `Committer` are not the same, semantically speaking.
+                            They may (and most of the times will) be the same.
+
+                            Git allows you to make changes in history in behalf of the original author. Like when you accept a pull request or integrate different branches.
+
+                            So, the author is the person who initially wrote the commit, the commiter is the person who last applied the patch.
+                        </aside>
+                    </section>
+
+                    <section>
+                        <p>But enough of this, it's just metadata.</p>
+                        <h2 class="fragment">What's a commit <strong>really</strong> made of?</h2>
+                    </section>
+
+                    <section data-background="/images/planes-trains-automobiles.jpg">
+                        <h1 class="shadow">Blobs, Trees &amp; Checksums</h1>
+                    </section>
 
 
 
                     <!-- ### Blobs ### -->
+                    <section>
+                        <h2>The Blob</h2>
+
+                        <img src="/images/blob-movie-poster.jpg">
+                    </section>
+
+                    <section>
+                        <h3>
+                            <strong class="green">Git</strong> is actually a very simple <strong class="green">key-value data store</strong>.
+                        </h3>
+
+                        <h3 class="fragment">
+                            You can give it anything, it will store it and give you back a key.
+                        </h3>
+                    </section>
+
+                    <section>
+                        <h3>
+                            The file it creates is called a <strong class="green">blob</strong>. It is the binary representation of any given content.
+                        </h3>
+                        <h3 class="fragment">
+                            Git uses blobs to save the different versions of your files.
+                        </h3>
+                    </section>
+
+                    <section>
+                        <h2>Let's check this out</h2>
+
+                        <h3 class="fragment">We will manually version a file.</h3>
+
+                        <pre class="fragment"><code data-trim>$ echo 'testing blobs' > some-file.txt</code></pre>
+
+                        <pre class="fragment"><code data-trim>$ git hash-object -w some-file.txt
+d675fa44e50606caa705c3f48de02cf129c7f9a2</code></pre>
+
+<pre class="fragment"><code data-trim>$ find .git/objects
+.git/objects
+.git/objects/d6
+.git/objects/d6/75fa44e50606caa705c3f48de02cf129c7f9a2</code></pre>
+
+<pre class="fragment"><code data-trim>$ git cat-file d675fa44e50606caa705c3f48de02cf129c7f9a2
+testing blobs</code></pre>
+
+                        <p class="fragment">
+                            As we can see, git now has a blob with our file's content.<br>
+                            This will be v1 of some-file.txt.
+                        </p>
+                    </section>
+
+                    <section>
+                        <pre><code data-trim>echo 'a new line' >> some-file.txt</code></pre>
+
+                        <pre class="fragment"><code data-trim>$ git hash-object -w some-file.txt
+1aeaedbf4ee8dccec5bc2b1f1168efef19378ffd</code></pre>
+
+                        <pre class="fragment"><code data-trim>$ find .git/objects
+.git/objects
+.git/objects/1a
+.git/objects/1a/eaedbf4ee8dccec5bc2b1f1168efef19378ffd
+.git/objects/d6
+.git/objects/d6/75fa44e50606caa705c3f48de02cf129c7f9a2</code></pre>
+
+<pre class="fragment"><code data-trim>$ git cat-file d675fa44e50606caa705c3f48de02cf129c7f9a2
+testing blobs
+a new line</code></pre>
+
+                        <p class="fragment">
+                            Now we have both versions of our files.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>But we lost the filenames in the process!</h2>
+
+                        <h3>Besides, how is this related to git?</h3>
+                    </section>
+
+
+
+                    <!-- ### Trees ### -->
+                    <section>
+                        <h2>
+                            Enter the <strong>Tree object</strong>.
+                        </h2>
+
+                        <h3 class="fragment">
+                            A <strong class="green">commit</strong> points to a <strong class="green">tree</strong> that represents the state of the Stage (or Index) at the time of the commit.
+                        </h3>
+
+                        <h3 class="fragment">
+                            A <strong class="green">tree</strong> can reference <strong class="green">other trees</strong> and <strong class="green">blobs</strong>. It also stores the <strong class="green">filename</strong> that correspond to each blob.
+                        </h3>
+                    </section>
 
 
 
                     <!-- ### Checksums ### -->
+                </section>
 
 
 
