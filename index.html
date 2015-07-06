@@ -441,6 +441,50 @@ a new line</code></pre>
 
 
                     <!-- ### Checksums ### -->
+
+                    <section>
+                        <h3>You may have noticed that <strong class="green">blobs</strong> and <strong class="green">trees</strong> are identified by a <strong class="green">hash</strong>.</h3>
+
+                        <h3>This is not just a simple identifier</h3>
+                    </section>
+
+                    <section>
+                        <h2>It's a SHA1 <strong>checksum</strong></h2>
+                    </section>
+
+                    <section>
+                        <img src="/images/oh-i-see.gif">
+                    </section>
+
+                    <section>
+                        <h3>
+                            A <strong class="green">checksum</strong> is a <strong class="green">hash</strong> of some <strong class="green">data</strong>
+                        </h3>
+
+                        <p class="fragment">
+                            The purpose is to <strong class="green">detect changes</strong> that may be introduced to a file. Willingly, by editing, or unwillingly, caused during data transmission or storage (file corruption).
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3>
+                            <strong class="green">Commits</strong>, <strong class="green">blobs</strong> and <strong class="green">trees</strong> are <strong class="green">checksumed</strong>.
+                        </h3>
+
+                        <p class="fragment">
+                            And the resulting <strong class="green">hash</strong> is used to <strong class="green">identify</strong> each of <strong class="green">this objects</strong>.
+                        </p>
+
+                        <p class="fragment">This also means...</p>
+                    </section>
+
+                    <section>
+                        <h2>Data integrity FTW!</h2>
+
+                        <h3 class="fragment">There is <strong class="green">no data corruption</strong> that can go unnoticed to Git.</h3>
+                    </section>
+
+                    <section data-background="/images/great-success.jpg" data-background-size="contain" />
                 </section>
 
 
