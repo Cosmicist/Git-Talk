@@ -333,6 +333,10 @@ testing blobs</code></pre>
 <pre class="fragment"><code data-trim>$ git cat-file 1aeaedbf4ee8dccec5bc2b1f1168efef19378ffd
 testing blobs
 a new line</code></pre>
+
+                        <aside class="notes" data-markdown>
+                            We use `git cat-file` because the blob file is actually a zlib-compressed binary, using regular `cat` would just output unreadable gibberish.
+                        </aside>
                     </section>
 
                     <section>
