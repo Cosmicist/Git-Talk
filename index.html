@@ -548,50 +548,138 @@ a new line</code></pre>
 
 
                 <!-- ### Branching 101 ### -->
+                <section>
+                    <section>
+                        <h2>Branching 101</h2>
+                    </section>
+
+                    <!-- ### Branches ### -->
+                    <section>
+                        <h3>What do we talk about when we talk about <strong class="green">branches</strong>?</h3>
+
+                        <p class="fragment">
+                            A <strong class="green">branch</strong> is simply a <strong class="green">pointer</strong> to a <strong class="green">commit</strong>.
+                        </p>
+
+                        <img src="/images/branches.svg" class="fragment">
+
+                        <p class="fragment">
+                            Git will automatically point the current branch to new commits as you go.
+                        </p>
+                    </section>
 
 
 
                     <!-- ### The HEAD ### -->
+                    <section>
+                        <h3>But, how does Git know which is the <strong class="green">current branch</strong>?</h3>
+
+                        <p class="fragment">
+                            There's a <strong>special pointer</strong> called <strong class="green">HEAD</strong>. And it's just <strong class="green">a pointer to the current branch</strong>.
+                        </p>
+
+                        <img src="/images/HEAD.svg" class="fragment">
+                    </section>
+
+                    <!-- ### Detached HEAD State ### -->
+                    <section>
+                        <h3>Bonus: <strong class="green">Detached HEAD State</strong></h3>
+
+                        <pre class="fragment"><code>Note: checking out '94a87f75a'.
+
+You are in 'detached HEAD' state. You can look around, make
+experimental changes and commit them, and you can discard any
+commits you make in this state without impacting any branches by
+performing another checkout.
+
+If you want to create a new branch to retain commits you create,
+you may do so (now or later) by using -b with the checkout
+command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 94a87f7... Added readme</code></pre>
+
+                        <h3 class="fragment">Confusing, right?</h3>
+                    </section>
+
+                    <section>
+                        <h3>It's <strong>a lot simpler</strong> than it looks like</h3>
+
+                        <p class="fragment">
+                            The <strong class="green">detached HEAD state</strong> happens when you <strong>check out a commit or a tag</strong> that is <strong>not the latest</strong> in the branch, i.e. <strong>your HEAD no longer points to a branch</strong>.
+                        </p>
+
+                        <p class="fragment">
+                            Git will let you make new commits, creating a tangen in history, which you can keep by creating a new branch, or discard, by checking out another branch.
+                        </p>
+                    </section>
 
 
 
-                    <!-- ### Branches and Remote-tracking Branches ### -->
+                    <!-- ### Remote-tracking Branches ### -->
+                    <section>
+                        <h3>Remote-tracking branches</h3>
+
+                        <p class="fragment">
+                            <strong class="green">Remote-tracking branches</strong> are <strong>local</strong> references to the state of remote branches.
+                        </p>
+
+                        <img src="/images/remote-tracking-branches.svg" class="fragment">
+
+                        <p class="fragment">
+                            They <strong>can't be moved</strong>, that is done <strong>automatically</strong> by Git when you <strong>push</strong> or <strong>fetch</strong>.
+                        </p>
+                    </section>
+                </section>
 
 
 
                 <!-- ### Go with the Workflow ### -->
+                <section>
+                    <section data-background="/images/go_with_the_flow.jpg">
+                        <h1>Go with the flow</h1>
+
+                        <p>
+                            <span class="fragment">Phew! We've covered the basics!</span>
+                            <span class="fragment">But it's not over...</span>
+                        </p>
+
+                        <h3 class="fragment">We'll go into THE WORKFLOW</h3>
+                    </section>
 
 
 
-                <!-- ### Pull ### -->
+                    <!-- ### Pull ### -->
 
 
 
-                    <!-- ### Fetch ### -->
+                        <!-- ### Fetch ### -->
 
 
 
-                    <!-- ### Merge ### -->
+                        <!-- ### Merge ### -->
 
 
 
-                    <!-- ### Rebase ### -->
+                        <!-- ### Rebase ### -->
 
 
 
-                <!-- ### Fast-forward... WTFIFF?!? ### -->
+                    <!-- ### Fast-forward... WTFIFF?!? ### -->
 
 
 
-                <!-- ### Integrating different branches with rebase ### -->
+                    <!-- ### Integrating different branches with rebase ### -->
 
 
 
-                <!-- ### Push ### -->
+                    <!-- ### Push ### -->
 
 
 
-                    <!-- ### Forced Push ### -->
+                        <!-- ### Forced Push ### -->
+                </section>
 
 
 
