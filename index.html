@@ -652,13 +652,123 @@ HEAD is now at 94a87f7... Added readme</code></pre>
                         <h3 class="fragment">We'll go into THE WORKFLOW</h3>
                     </section>
 
+                    <section>
+                        <h3>What do we do every day?</h3>
+
+                        <p class="fragment">Besides commit...</p>
+
+                        <h2 class="fragment">Push &amp; Pull</h2>
+                    </section>
+
+                    <section>
+                        <h3>You probaby know this already</h3>
+
+                        <p class="fragment">
+                            But you need to get this righ, otherwise...
+                        </p>
+
+                        <div class="fragment">
+                            <img src="/images/bad-time.png">
+
+                            <p>
+                                <strong>YOU'RE GONNA HAVE A BAD TIME</strong>
+                            </p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <img src="/images/push-pull-bad-time.jpg">
+                    </section>
+
 
 
                     <!-- ### Pull ### -->
+                    <section>
+                        <h3>
+                            <strong class="green">pull</strong>
+                            <strong class="fragment">
+                                =<strong class="fragment green">fetch</strong>
+                            </strong>
+                            <span class="fragment">
+                                + (<strong class="green">merge</strong>
+                                | <strong class="green">rebase</strong>)
+                            </span>
+                        </h3>
+
+                        <div class="box box-2-4 align-left fragment">
+                            <p>
+                                $ git pull
+                                <span class="fragment slide-in">
+                                    <i class="fa fa-arrow-right"></i>
+                                    <strong class="green">merge</strong>
+                                </span>
+                            </p>
+
+                            <p class="fragment">
+                                $ git pull --rebase
+                                <span class="fragment slide-in">
+                                    <i class="fa fa-arrow-right"></i>
+                                    <strong class="green">rebase</strong>
+                                </span>
+                            </p>
+                        </div>
+                    </section>
 
 
 
                         <!-- ### Fetch ### -->
+                        <section>
+                            <h2>Fetch</h2>
+
+                            <img src="/images/fetch-fail.jpg">
+                        </section>
+
+                        <section>
+                            <p>
+                                <strong class="green">Fetch</strong> updates the <strong class="green">remote-tracking branches</strong> to reflect the state of the <strong class="green">remote branches</strong>
+                            </p>
+
+                            <img src="/images/fetch.svg">
+
+                            <p>
+                                Bringing new commits along, if there are any.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h3>Yep! Just that</h3>
+
+                            <p class="fragment">
+                                We have the new <strong class="green">commits</strong>, and the updated <strong class="green">remote-tracking branches</strong>...
+                            </p>
+
+                            <h3 class="fragment">BUT!</h3>
+                        </section>
+
+                        <section>
+                            <h3>
+                                Our <strong class="green">local branch</strong> is still behind.
+                            </h3>
+                            <h3 class="fragment">
+                                Our <strong class="green">working directory</strong> is still behind.
+                            </h3>
+
+                            <p class="fragment">
+                                We need to update both!
+                            </p>
+
+                            <h3 class="fragment">
+                                <strong class="green">merge</strong> | <strong class="green">rebase</strong>
+                            </h3>
+                        </section>
+
+                        <section>
+                            <h3>We'll use this case</h3>
+
+                            <img src="/images/fetch-no-ff.svg">
+
+                            <p>We can't just point our branch to the latest commit.</p>
+                        </section>
 
 
 
