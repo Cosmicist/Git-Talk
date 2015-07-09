@@ -765,27 +765,136 @@ HEAD is now at 94a87f7... Added readme</code></pre>
                         </section>
 
                         <section>
-                            <h3>We'll use this case</h3>
+                            <h3>We'll use this case, a little more daunting</h3>
 
-                            <img src="/images/fetch-no-ff.svg">
+                            <img src="/images/merge-rebase.svg">
+                        </section>
 
-                            <p>We can't just point our branch to the latest commit.</p>
+
+                    <section>
+                        <h2>Plan the attack</h2>
+
+                        <div class="fragment">
+                            <h3>Merge workflow</h3>
+                            <ol>
+                                <li class="fragment">
+                                    <strong class="green">merge</strong> <strong class="orange">hotfix</strong>
+                                    into <strong class="orange">master</strong>
+                                </li>
+                                <li class="fragment">
+                                    <strong class="green">merge</strong> <strong class="orange">origin/master</strong>
+                                    into <strong class="orange">master</strong>
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div class="fragment">
+                            <h3>Rebase workflow</h3>
+                            <ol>
+                                <li class="fragment">
+                                    <strong class="green">rebase</strong> <strong class="orange">hotfix</strong>
+                                    into <strong class="orange">master</strong>
+                                </li>
+                                <li class="fragment">
+                                    <strong class="green">rebase</strong> <strong class="orange">origin/master</strong>
+                                    into <strong class="orange">master</strong>
+                                </li>
+                            </ol>
+                        </div>
+                    </section>
+
+
+                    <!-- ### Merge ### -->
+                        <section>
+                            <h2>Merge workflow</h2>
+                        </section>
+
+                        <!-- ### Merge hotfix into master ### -->
+                        <section>
+                            <h2>
+                                <strong class="badge">1</strong>
+                                <strong class="green">merge</strong> <strong class="orange">hotfix</strong>
+                                into <strong class="orange">master</strong>
+                            </h2>
+                        </section>
+
+                        <section>
+                            <pre><code>$ git checkout master</code></pre>
+
+                            <img src="/images/merge-01.svg">
+                        </section>
+
+                        <section>
+                            <pre><code>$ git merge hotfix
+Updating f0dde76..5d6ee4c
+Fast-forward
+index.html | 2 ++
+1 file changed, 2 insertions(+)</code></pre>
+
+                            <img src="/images/merge-02.svg">
+                        </section>
+
+                        <!-- ### Fast-forward... WTFIFF?!? ### -->
+                        <section>
+                            <h2>Fast-forward</h2>
+
+                            <p class="fragment">
+                                When the history between two branches doesn't diverge, Git can just move the pointer of your <strong class="green">local branch</strong> <strong>forward</strong>.
+                            </p>
+
+                            <h3 class="fragment">
+                                No <strong class="green">merge</strong>.
+                            </h3>
+                            <h3 class="fragment">
+                                No <strong class="green">rebase</strong>.
+                            </h3>
+                            <h3 class="fragment">
+                                Just move it <strong class="green">forward</strong>.
+                            </h3>
+
+                            <aside class="notes">
+                                Other VCSs will only make merges, even in cases like this. The difference here is the branching system. Since Git's branches are just pointers, this can be easily achieved by moving it.
+                            </aside>
                         </section>
 
 
 
-                        <!-- ### Merge ### -->
+                        <!-- ### Merge origin/master into master ### -->
                         <section>
-                            <h2>Merge strategy</h2>
+                            <h2>
+                                <strong class="badge">2</strong>
+                                <strong class="green">merge</strong> <strong class="orange">origin/master</strong>
+                                into <strong class="orange">master</strong>
+                            </h2>
 
-                            <img src="/images/merge.jpg">
+                            <pre class="fragment"><code>$ git merge origin/master
+    Merge made by the 'recursive' strategy.
+    index.html |    1 +
+    1 file changed, 1 insertion(+)</code></pre>
+
+                            <aside class="notes">
+                                Because the commit on the branch you’re on isn’t a direct ancestor of the branch you’re merging in, Git has to do some work. In this case, Git does a simple three-way merge, using the two snapshots pointed to by the branch tips and the common ancestor of the two.
+                            </aside>
                         </section>
 
-
-
-                        <!-- ### Rebase ### -->
                         <section>
-                            <h2>Rebase strategy</h2>
+                            <h3><strong class="green">Recursive strategy</strong> = three-way merge</h3>
+
+                            <img src="/images/merge-03.svg"/>
+
+                            <aside class="notes">
+                                Git will compare the common ancestor and try to resolve any conflicts automatically.
+                                Three-way merge is the smartest stragey for automatic conflict resolution.
+                            </aside>
+                        </section>
+
+                        <section>
+                            <h3>
+                                Snapshot created
+                                <i class="fa fa-arrow-right"></i>
+                                <strong class="green">merge commit</strong>
+                            </h3>
+                            <img src="/images/merge-04.svg">
                         </section>
 
 

@@ -80,7 +80,7 @@ body {
 .reveal ol, .reveal dl, .reveal ul {
   display: inline-block;
   text-align: left;
-  margin: 0 0 0 1em; }
+  margin: 0 0 1em 1em; }
 
 .reveal ol {
   list-style-type: decimal; }
@@ -204,6 +204,10 @@ body {
   color: #CC3030;
 }
 
+.reveal .orange {
+  color: #d43c00;
+}
+
 .reveal .shadow {
   text-shadow: 0px -1px 0px #494949,
                -1px -1px 0px #494949,
@@ -240,6 +244,20 @@ body {
   }
   .reveal .box.box-3-4 {
     width: 75%;
+  }
+
+  .reveal .badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 20px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #6aa84f;
+    border-radius: 10px;
   }
 
 /*********************************************
