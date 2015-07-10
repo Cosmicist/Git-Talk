@@ -1111,6 +1111,10 @@ ef29a87..ae798ab  master -> master</code></pre>
 
 
                 <!-- ### Everything you (n)ever wanted to know about Push/Pull Syntax ### -->
+                <section>
+                    <section>
+                        <h2>Everything you <span class="fragment">(n)</span>ever wanted to know about push/pull syntax</h2>
+                    </section>
 
 
 
@@ -1119,14 +1123,97 @@ ef29a87..ae798ab  master -> master</code></pre>
 
 
                     <!-- ### Long syntax ### -->
+                    <section>
+                        <h2>Long syntax</h2>
+
+                        <pre><code>$ git pull &lt;remote&gt; &lt;remote ref&gt;[:&lt;local ref&gt;]
+$ git push &lt;remote&gt; &lt;local ref&gt;[:&lt;remote ref&gt;]</code></pre>
+
+                        <p>
+                            <strong class="green">ref</strong> is the path to the <strong class="green">object</strong> as it is found in the .git/ directory, for example: refs/heads/master or refs/tags/some-tag.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>Long syntax <strong>push</strong> example</h2>
+
+                        <pre><code>$ git push -u origin refs/heads/branch:refs/heads/branch-alt
+Total 0 (delta 0), reused 0 (delta 0)
+To git@github.com:user/repo.git
+* [new branch]      branch -> branch-alt</code></pre>
+
+                        <aside class="notes" data-markdown>
+                            In this case, we **push** a local branch `branch` with the
+                            alternative name on the remote `branch-alt`.
+                        </aside>
+                    </section>
 
 
 
                     <!-- ### Short syntax ### -->
+                    <section>
+                        <h2>Short syntax sample</h2>
+
+                        <h3>With non-matching branch names</h3>
+
+                        <pre><code>$ git push origin branch-local:branch-remota</code></pre>
+
+                        <h3>Matching branch names</h3>
+
+                        <pre><code>$ git push origin branch-x:branch-x</code></pre>
+                        <p>Even shorter!</p>
+                        <pre><code>$ git push origin branch-x</code></pre>
+
+                        <aside class="notes">
+                            <p>
+                                Git is smart enough to let you use a short syntax for the refs, using only the name and not the full path.
+                            </p>
+
+                            <p>
+                                There are two short levels. You can use only the branch names insted of the full path to the ref object; and if the branch name matches on the remote you can skip naming the remote branch altogether. This is the most common case, as branch names on the remote are rarely different.
+                            </p>
+                        </aside>
+                    </section>
 
 
 
                     <!-- ### So... ### -->
+                    <section>
+                        <h3>Wrapping up</h3>
+
+                        <p>We could say</p>
+
+                        <p>
+                            $ git push <strong class="orange">&lt;to which remote&gt;</strong> <strong class="orange">&lt;which
+                            local branch&gt;</strong>:[<strong class="orange">&lt;to which remote branch&gt;</strong>]
+                        </p>
+
+                        <p>
+                            $ git pull <strong class="orange">&lt;from which remote&gt;</strong> <strong class="orange">&lt;which remote branch&gt;</strong>:[<strong class="orange">&lt;to which local branch&gt;</strong>]
+                        </p>
+                    </section>
+                </section>
+
+                <section>
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="http://git-scm.com">http://git-scm.com</a></li>
+                        <li><a href="http://git-scm.com/book/en/v2">http://git-scm.com/book/en/v2</a></li>
+                        <li><a href="http://www.gitguys.com">http://www.gitguys.com</a></li>
+                        <li><a href="http://www.drdobbs.com/tools/three-way-merging-a-look-under-the-hood/240164902">http://www.drdobbs.com/tools/three-way-merging-a-look-under-the-hood/240164902</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>Questions?</h1>
+
+                    <img src="/images/scrubs-head-explode-o.gif"/>
+                </section>
+
+                <section>
+                    <h1>Thanks!</h1>
+                    <img src="/images/bye.jpg"/>
+                </section>
 
             </div>
         </div>
