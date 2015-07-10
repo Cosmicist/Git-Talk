@@ -914,15 +914,198 @@ index.html |    1 +
 
 
 
-                    <!-- ### Integrating different branches with rebase ### -->
+                    <!-- ### Rebase ### -->
+                        <section>
+                            <h2>Rebase workflow</h2>
 
+                            <img src="/images/rebase.gif"/>
+                        </section>
+
+                        <!-- ### Rebase hotfix into master ### -->
+                        <section>
+                            <h2>
+                                <strong class="badge">1</strong>
+                                <strong class="green">rebase</strong> <strong class="orange">hotfix</strong>
+                                into <strong class="orange">master</strong>
+                            </h2>
+                        </section>
+
+                        <section>
+                                <pre><code>$ git rebase hotfix
+First, rewinding head to replay your work on top of it...
+Fast-forwarded feature to master.</code></pre>
+
+                            <img src="/images/rebase-01.svg">
+                        </section>
+
+                        <section>
+                            <h2>Yep! Fast-forward again!</h2>
+
+                            <p class="fragment">
+                                Using <strong class="green">rebase</strong> or <strong class="green">merge</strong> when the history has
+                                <strong>not diverged</strong> will both result in a
+                                <strong class="green">fast-forward</strong>.
+                            </p>
+
+                            <p class="fragment">
+                                Unless <strong class="green">--no-ff</strong> flag is passed.
+                            </p>
+                        </section>
+
+
+
+                        <!-- ### Rebase origin/master into master ### -->
+                        <section>
+                            <h2>
+                                <strong class="badge">2</strong>
+                                <strong class="green">rebase</strong> <strong class="orange">origin/master</strong>
+                                into <strong class="orange">master</strong>
+                            </h2>
+
+                                <pre class="fragment"><code>$ git rebase origin/master
+First, rewinding head to replay your work on top of it...
+Applying: The commit summary here</code></pre>
+
+                            <aside class="notes">
+                                Again the the commit on the branch you’re on isn’t a direct ancestor of the branch you’re merging in.
+                            </aside>
+                        </section>
+
+                        <section>
+                            <h2>Rewinding head?</h2>
+                            <h3 class="fragment">How does rebase work?</h3>
+                        </section>
+
+                        <section>
+                            <h3>First, <strong class="green">rewinds HEAD</strong> to the <strong>common
+                                ancestor</strong>.</h3>
+
+                            <img src="/images/rebase-02.svg" class="fragment">
+                        </section>
+
+                        <section data-transition="convex-in fade-out">
+                            <h3>
+                                Then it re-applies the changes in <strong class="orange">master</strong> on top of
+                                <strong class="orange">origin/master</strong>.
+                            </h3>
+
+                            <img src="/images/rebase-03.svg" class="fragment"/>
+
+                            <aside class="notes">
+                                <p>
+                                    This commits are not the same, they do have the same changes, but the commits are new.
+                                </p>
+                                <p>
+                                    The old commits are still there, even pointing to the same parent, but have no branch associated to them anymore. In Git, is really difficult to loose something for good.
+                                </p>
+                            </aside>
+                        </section>
+
+                        <section data-transition="fade-in convex-out">
+                            <h3>
+                                The result is a cleaner, linear history.
+                            </h3>
+
+                            <img src="/images/rebase-04.svg" class="fragment"/>
+                        </section>
 
 
                     <!-- ### Push ### -->
+                    <section>
+                        <h2>Push</h2>
+
+                        <h3 class="fragment">
+                            This command <strong class="green">pushes</strong> our history to the <strong>remote</strong>.
+                        </h3>
+                    </section>
+
+                    <section>
+                        <p>
+                            <strong class="orange">origin/master</strong> branch and the <strong>remote</strong>'s <strong class="orange">master</strong> branch are the same.
+                        </p>
+
+                        <img src="/images/push-01.svg" class="fragment"/>
+
+                        <p class="fragment">
+                            But we have new local commits waiting to be pushed.
+                        </p>
+                    </section>
+
+                    <section>
+                        <pre><code>$ git push
+Counting objects: 11, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 1.16 KiB | 0 bytes/s, done.
+Total 9 (delta 6), reused 0 (delta 0)
+To git@github.com:xFlatlinex/Git-Talk.git
+ef29a87..ae798ab  master -> master</code></pre>
+                    </section>
+
+                    <section>
+                        <p>Now the remote is up to date with our changes</p>
+                        <img src="/images/push-02.svg"/>
+                    </section>
 
 
 
                         <!-- ### Forced Push ### -->
+                        <section>
+                            <h2>Forced push</h2>
+
+                            <div class="box box-2-4 fragment">
+                                <p>$ git <span class="green">push</span> <strong class="red">--force</strong></p>
+                            </div>
+
+                            <img src="/images/git_push_--force.gif" class="fragment"/>
+                        </section>
+
+                        <section>
+                            <h3>A new situation</h3>
+
+                            <img src="/images/push--force-01.svg" class="fragment"/>
+
+                            <p class="fragment">
+                                We will rebase <strong class="orange">master</strong> from <strong class="orange">ticket</strong>
+                            </p>
+                        </section>
+
+                        <section>
+                            <img src="/images/push--force-02.svg"/>
+
+                            <aside class="notes">
+                                <p>
+                                    Note that <strong class="orange">origin/master</strong> (and the remote <strong class="orange">master</strong> branch) still points to our now orphan "pre-rebase" commits.
+                                </p>
+                            </aside>
+                        </section>
+
+                        <section>
+                            <h3>
+                                We rewrote <strong class="orange">master</strong>'s history.
+                            </h3>
+
+                            <p class="fragment">
+                                We have introduced a change <strong class="fragment highlight-blue">before</strong> our <strong class="orange">master</strong> changes.
+                            </p>
+
+                            <p class="fragment">
+                                So the original changes are still there. But the local history is now completely different.
+                            </p>
+                        </section>
+
+                    <section>
+                        <h3><strong class="red">Only</strong> in situations like this</h3>
+                        <h3>it is justified to <strong class="green">force push</strong></h3>
+
+                        <p class="fragment">
+                            It is <strong class="red">never safe</strong>, but with proper coordination with your team mates it can go painlessly.
+                        </p>
+                    </section>
+
+                    <section>
+                        <img src="/images/push--force-03.svg"/>
+                    </section>
                 </section>
 
 

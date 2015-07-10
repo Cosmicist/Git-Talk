@@ -347,6 +347,12 @@ body {
 /*********************************************
  * VIEW FRAGMENTS
  *********************************************/
+
+.reveal span.fragment,
+.reveal strong.fragment {
+  display: inline-block;
+}
+
 .reveal .slides section .fragment.highlight-green.visible {
   color: #6aa84f; }
 .reveal .slides section .fragment.highlight-current-green.current-fragment {
