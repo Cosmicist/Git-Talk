@@ -778,11 +778,11 @@ HEAD is now at 94a87f7... Added readme</code></pre>
                             <h3>Merge workflow</h3>
                             <ol>
                                 <li class="fragment">
-                                    <strong class="green">merge</strong> <strong class="orange">hotfix</strong>
+                                    <strong class="green">merge</strong> <strong class="orange">origin/master</strong>
                                     into <strong class="orange">master</strong>
                                 </li>
                                 <li class="fragment">
-                                    <strong class="green">merge</strong> <strong class="orange">origin/master</strong>
+                                    <strong class="green">merge</strong> <strong class="orange">hotfix</strong>
                                     into <strong class="orange">master</strong>
                                 </li>
                             </ol>
@@ -792,12 +792,16 @@ HEAD is now at 94a87f7... Added readme</code></pre>
                             <h3>Rebase workflow</h3>
                             <ol>
                                 <li class="fragment">
-                                    <strong class="green">rebase</strong> <strong class="orange">hotfix</strong>
-                                    into <strong class="orange">master</strong>
+                                    <strong class="green">rebase</strong> <strong class="orange">master</strong>
+                                    from <strong class="orange">origin/master</strong>
                                 </li>
                                 <li class="fragment">
-                                    <strong class="green">rebase</strong> <strong class="orange">origin/master</strong>
-                                    into <strong class="orange">master</strong>
+                                    <strong class="green">rebase</strong> <strong class="orange">hotfix</strong>
+                                    from <strong class="orange">master</strong>
+                                </li>
+                                <li class="fragment">
+                                    <strong class="green">rebase</strong> <strong class="orange">master</strong>
+                                    from <strong class="orange">hotfix</strong>
                                 </li>
                             </ol>
                         </div>
@@ -815,7 +819,7 @@ HEAD is now at 94a87f7... Added readme</code></pre>
                         <section>
                             <h2>
                                 <strong class="badge">1</strong>
-                                <strong class="green">merge</strong> <strong class="orange">hotfix</strong>
+                                <strong class="green">merge</strong> <strong class="orange">origin/master</strong>
                                 into <strong class="orange">master</strong>
                             </h2>
                         </section>
@@ -827,13 +831,14 @@ HEAD is now at 94a87f7... Added readme</code></pre>
                         </section>
 
                         <section>
-                            <pre><code>$ git merge hotfix
+                            <pre><code>$ git merge origin/master
 Updating f0dde76..5d6ee4c
 Fast-forward
 index.html | 2 ++
 1 file changed, 2 insertions(+)</code></pre>
 
-                            <img src="/images/merge-02.svg">
+                            <!-- <img src="/images/merge-02.svg"> -->
+                            <img src="/images/merge-02-alt.svg">
                         </section>
 
                         <!-- ### Fast-forward... WTFIFF?!? ### -->
@@ -865,7 +870,7 @@ index.html | 2 ++
                         <section>
                             <h2>
                                 <strong class="badge">2</strong>
-                                <strong class="green">merge</strong> <strong class="orange">origin/master</strong>
+                                <strong class="green">merge</strong> <strong class="orange">hotfix</strong>
                                 into <strong class="orange">master</strong>
                             </h2>
 
@@ -882,7 +887,7 @@ index.html |    1 +
                         <section>
                             <h3><strong class="green">Recursive strategy</strong> = three-way merge</h3>
 
-                            <img src="/images/merge-03.svg"/>
+                            <img src="/images/merge-03-alt.svg"/>
 
                             <aside class="notes">
                                 Git will compare the common ancestor and try to resolve any conflicts automatically.
@@ -896,11 +901,11 @@ index.html |    1 +
                                 <i class="fa fa-arrow-right"></i>
                                 <strong class="green">merge commit</strong>
                             </h3>
-                            <img src="/images/merge-04.svg">
+                            <img src="/images/merge-04-alt.svg">
 
                             <aside class="notes">
                                 <p>
-                                    The downside is that the snapshots of the commits that were on origin/master are now all applied together in the merge commit.
+                                    The downside is that the snapshots of the commits that were on <strong>hotfix</strong> are now all applied together in the merge commit.
                                 </p>
                                 <p>
                                     We could get rid of these old commits, since the changes are now duplicated. But that would leave a difficult to comprehend history.
@@ -925,17 +930,17 @@ index.html |    1 +
                         <section>
                             <h2>
                                 <strong class="badge">1</strong>
-                                <strong class="green">rebase</strong> <strong class="orange">hotfix</strong>
-                                into <strong class="orange">master</strong>
+                                <strong class="green">rebase</strong> <strong class="orange">master</strong>
+                                from <strong class="orange">origin/master</strong>
                             </h2>
                         </section>
 
                         <section>
-                                <pre><code>$ git rebase hotfix
+                                <pre><code>$ git rebase origin/master
 First, rewinding head to replay your work on top of it...
-Fast-forwarded feature to master.</code></pre>
+Fast-forwarded master to origin/master.</code></pre>
 
-                            <img src="/images/rebase-01.svg">
+                            <img src="/images/rebase-01-alt.svg">
                         </section>
 
                         <section>
@@ -958,11 +963,12 @@ Fast-forwarded feature to master.</code></pre>
                         <section>
                             <h2>
                                 <strong class="badge">2</strong>
-                                <strong class="green">rebase</strong> <strong class="orange">origin/master</strong>
-                                into <strong class="orange">master</strong>
+                                <strong class="green">rebase</strong> <strong class="orange">hotfix</strong>
+                                from <strong class="orange">master</strong>
                             </h2>
 
-                                <pre class="fragment"><code>$ git rebase origin/master
+                                <pre class="fragment"><code>$ git checkout hotfix
+$ git rebase master
 First, rewinding head to replay your work on top of it...
 Applying: The commit summary here</code></pre>
 
@@ -980,16 +986,16 @@ Applying: The commit summary here</code></pre>
                             <h3>First, <strong class="green">rewinds HEAD</strong> to the <strong>common
                                 ancestor</strong>.</h3>
 
-                            <img src="/images/rebase-02.svg" class="fragment">
+                            <img src="/images/rebase-02-alt.svg" class="fragment">
                         </section>
 
                         <section data-transition="convex-in fade-out">
                             <h3>
-                                Then it re-applies the changes in <strong class="orange">master</strong> on top of
-                                <strong class="orange">origin/master</strong>.
+                                Then it replays the changes in <strong class="orange">hotfix</strong> on top of
+                                <strong class="orange">master</strong>.
                             </h3>
 
-                            <img src="/images/rebase-03.svg" class="fragment"/>
+                            <img src="/images/rebase-03-alt.svg" class="fragment"/>
 
                             <aside class="notes">
                                 <p>
@@ -1006,7 +1012,26 @@ Applying: The commit summary here</code></pre>
                                 The result is a cleaner, linear history.
                             </h3>
 
-                            <img src="/images/rebase-04.svg" class="fragment"/>
+                            <img src="/images/rebase-04-alt.svg" class="fragment"/>
+                        </section>
+
+                        <section>
+                            <h2>
+                                <strong class="badge">3</strong>
+                                Now we can <strong>merge</strong> or <strong>rebase</strong> <strong class="orange">master</strong> from <strong class="orange">hotfix</strong>.
+                            </h2>
+                        </section>
+
+                        <section>
+                            <h3>
+                                Any way would have the same result.
+                            </h3>
+
+                            <h2 class="fragment">
+                                A fast-forward.
+                            </h2>
+
+                            <img src="/images/rebase-05.svg" class="fragment"/>
                         </section>
 
 
