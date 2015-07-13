@@ -40,7 +40,7 @@
 
             <div class="slides">
                 <section
-                    data-background="/images/all-your-history-are-belong-to-git.png"
+                    data-background="images/all-your-history-are-belong-to-git.png"
                     data-background-size="contain"
                     data-background-color="#000"
                 >
@@ -65,7 +65,7 @@
                 </section>
 
                 <section
-                    data-background="/images/noidea.jpg"
+                    data-background="images/noidea.jpg"
                     data-background-size="contain"
                 >
                     <aside class="notes" data-markdown>
@@ -105,7 +105,7 @@
                 </section>
 
                 <section>
-                    <section data-background="/images/dag-wat.jpg">
+                    <section data-background="images/dag-wat.jpg">
                         <h1>DAG wat?</h1>
                     </section>
 
@@ -114,7 +114,7 @@
                     </section>
 
                     <section
-                        data-background="/images/dr-evil-right.gif"
+                        data-background="images/dr-evil-right.gif"
                         data-background-size="contain"
                     >
                     </section>
@@ -132,7 +132,7 @@
                             Formed by a collection of <strong class="fragment highlight-green">nodes</strong> and <strong class="fragment highlight-green">directed edges</strong> that connect them.
                         </h3>
 
-                        <img src="/images/dag-nodes-edges.svg">
+                        <img src="images/dag-nodes-edges.svg">
 
                         <p>
                             <strong class="fragment highlight-green">There is no way to start at some node N and cycle back again to N.</strong>
@@ -158,13 +158,13 @@
                     <section>
                         <h2>This is could be a <strong>tree</strong></h2>
                         <p><em>(Polytree actually &mdash;directed tree)</em></p>
-                        <img src="/images/tree-sample.svg">
+                        <img src="images/tree-sample.svg">
                         <h3>Only one parent per node</h3>
                     </section>
 
                     <section>
                         <h2>Only it's really a <strong>DAG</strong></h2>
-                        <img src="/images/dag-sample.svg">
+                        <img src="images/dag-sample.svg">
                         <h3>The <strong class="blue">blue node</strong> represents a <strong class="green">merge commit</strong></h3>
                     </section>
                 </section>
@@ -176,7 +176,7 @@
 
                     <section>
                         <h3>Most VCSs store only the <strong class="green">file changes</strong></h3>
-                        <img src="/images/changes.svg">
+                        <img src="images/changes.svg">
 
                         <aside class="notes">
                             This is practical in terms of disk space, but is not performant and pretty fragile.
@@ -186,7 +186,7 @@
 
                     <section>
                         <h3>While GIT stores a <strong class="green">snapshot</strong> <strong>of each file</strong></h3>
-                        <img src="/images/snapshots.svg">
+                        <img src="images/snapshots.svg">
                         <h4>
                             <strong>Efficient:</strong> If a file didn't change, a <strong class="green">link to the previous version</strong> is stored.
                         </h4>
@@ -245,7 +245,7 @@
                     <section>
                         <h2>Ever seen this?</h2>
 
-                        <img src="/images/author-vs-commit.png">
+                        <img src="images/author-vs-commit.png">
 
                         <aside class="notes" data-markdown>
                             `Author` and `Committer` are not the same, semantically speaking.
@@ -262,7 +262,7 @@
                         <h2 class="fragment">What's a commit <strong>really</strong> made of?</h2>
                     </section>
 
-                    <section data-background="/images/planes-trains-automobiles.jpg">
+                    <section data-background="images/planes-trains-automobiles.jpg">
                         <h1 class="shadow">Blobs, Trees &amp; Checksums</h1>
                     </section>
 
@@ -272,7 +272,7 @@
                     <section>
                         <h2>The Blob</h2>
 
-                        <img src="/images/blob-movie-poster.jpg">
+                        <img src="images/blob-movie-poster.jpg">
                     </section>
 
                     <section>
@@ -393,7 +393,7 @@ a new line</code></pre>
                     <section>
                         <h3>This is what a <strong class="green">tree</strong> looks like</h3>
 
-                        <img src="/images/tree-graph.svg">
+                        <img src="images/tree-graph.svg">
                     </section>
 
                     <section>
@@ -455,7 +455,7 @@ a new line</code></pre>
                     </section>
 
                     <section>
-                        <img src="/images/oh-i-see.gif">
+                        <img src="images/oh-i-see.gif">
                     </section>
 
                     <section>
@@ -486,7 +486,7 @@ a new line</code></pre>
                         <h3 class="fragment">There is <strong class="green">no data corruption</strong> that can go unnoticed to Git.</h3>
                     </section>
 
-                    <section data-background="/images/great-success.jpg" data-background-size="contain"></section>
+                    <section data-background="images/great-success.jpg" data-background-size="contain"></section>
                 </section>
 
 
@@ -567,7 +567,7 @@ a new line</code></pre>
                             A <strong class="green">branch</strong> is simply a <strong class="green">pointer</strong> to a <strong class="green">commit</strong>.
                         </p>
 
-                        <img src="/images/branches.svg" class="fragment">
+                        <img src="images/branches.svg" class="fragment">
 
                         <p class="fragment">
                             Git will automatically point the current branch to new commits as you go.
@@ -584,7 +584,7 @@ a new line</code></pre>
                             There's a <strong>special pointer</strong> called <strong class="green">HEAD</strong>. And it's just <strong class="green">a pointer to the current branch</strong>.
                         </p>
 
-                        <img src="/images/HEAD.svg" class="fragment">
+                        <img src="images/HEAD.svg" class="fragment">
                     </section>
 
                     <!-- ### Detached HEAD State ### -->
@@ -631,7 +631,7 @@ HEAD is now at 94a87f7... Added readme</code></pre>
                             <strong class="green">Remote-tracking branches</strong> are <strong>local</strong> references to the state of the branches in the remote(s).
                         </p>
 
-                        <img src="/images/remote-tracking-branches.svg" class="fragment">
+                        <img src="images/remote-tracking-branches.svg" class="fragment">
 
                         <p class="fragment">
                             They <strong>can't be moved</strong>, that is done <strong>automatically</strong> by Git when you <strong>push</strong> or <strong>fetch</strong>.
@@ -643,7 +643,7 @@ HEAD is now at 94a87f7... Added readme</code></pre>
 
                 <!-- ### Go with the Workflow ### -->
                 <section>
-                    <section data-background="/images/go_with_the_flow.jpg">
+                    <section data-background="images/go_with_the_flow.jpg">
                         <h1>Go with the flow</h1>
 
                         <p>
@@ -670,7 +670,7 @@ HEAD is now at 94a87f7... Added readme</code></pre>
                         </p>
 
                         <div class="fragment">
-                            <img src="/images/bad-time.png">
+                            <img src="images/bad-time.png">
 
                             <p>
                                 <strong>YOU'RE GONNA HAVE A BAD TIME</strong>
@@ -679,7 +679,7 @@ HEAD is now at 94a87f7... Added readme</code></pre>
                     </section>
 
                     <section>
-                        <img src="/images/push-pull-bad-time.jpg">
+                        <img src="images/push-pull-bad-time.jpg">
                     </section>
 
 
@@ -722,7 +722,7 @@ HEAD is now at 94a87f7... Added readme</code></pre>
                         <section>
                             <h2>Fetch</h2>
 
-                            <img src="/images/fetch-fail.jpg">
+                            <img src="images/fetch-fail.jpg">
                         </section>
 
                         <section>
@@ -730,7 +730,7 @@ HEAD is now at 94a87f7... Added readme</code></pre>
                                 <strong class="green">Fetch</strong> updates the <strong class="green">remote-tracking branches</strong> to reflect the state of the <strong class="green">remote branches</strong>
                             </p>
 
-                            <img src="/images/fetch.svg">
+                            <img src="images/fetch.svg">
 
                             <p>
                                 Bringing new commits along, if there are any.
@@ -767,7 +767,7 @@ HEAD is now at 94a87f7... Added readme</code></pre>
                         <section>
                             <h3>We'll use this case, a little more daunting</h3>
 
-                            <img src="/images/merge-rebase.svg">
+                            <img src="images/merge-rebase.svg">
                         </section>
 
 
@@ -812,7 +812,7 @@ HEAD is now at 94a87f7... Added readme</code></pre>
                         <section>
                             <h2>Merge workflow</h2>
 
-                            <img src="/images/merge.jpg"/>
+                            <img src="images/merge.jpg"/>
                         </section>
 
                         <!-- ### Merge hotfix into master ### -->
@@ -827,7 +827,7 @@ HEAD is now at 94a87f7... Added readme</code></pre>
                         <section>
                             <pre><code>$ git checkout master</code></pre>
 
-                            <img src="/images/merge-01.svg">
+                            <img src="images/merge-01.svg">
                         </section>
 
                         <section>
@@ -837,8 +837,8 @@ Fast-forward
 index.html | 2 ++
 1 file changed, 2 insertions(+)</code></pre>
 
-                            <!-- <img src="/images/merge-02.svg"> -->
-                            <img src="/images/merge-02-alt.svg">
+                            <!-- <img src="images/merge-02.svg"> -->
+                            <img src="images/merge-02-alt.svg">
                         </section>
 
                         <!-- ### Fast-forward... WTFIFF?!? ### -->
@@ -887,7 +887,7 @@ index.html |    1 +
                         <section>
                             <h3><strong class="green">Recursive strategy</strong> = three-way merge</h3>
 
-                            <img src="/images/merge-03-alt.svg"/>
+                            <img src="images/merge-03-alt.svg"/>
 
                             <aside class="notes">
                                 Git will compare the common ancestor and try to resolve any conflicts automatically.
@@ -901,7 +901,7 @@ index.html |    1 +
                                 <i class="fa fa-arrow-right"></i>
                                 <strong class="green">merge commit</strong>
                             </h3>
-                            <img src="/images/merge-04-alt.svg">
+                            <img src="images/merge-04-alt.svg">
 
                             <aside class="notes">
                                 <p>
@@ -923,7 +923,7 @@ index.html |    1 +
                         <section>
                             <h2>Rebase workflow</h2>
 
-                            <img src="/images/rebase.gif"/>
+                            <img src="images/rebase.gif"/>
                         </section>
 
                         <!-- ### Rebase hotfix into master ### -->
@@ -940,7 +940,7 @@ index.html |    1 +
 First, rewinding head to replay your work on top of it...
 Fast-forwarded master to origin/master.</code></pre>
 
-                            <img src="/images/rebase-01-alt.svg">
+                            <img src="images/rebase-01-alt.svg">
                         </section>
 
                         <section>
@@ -986,7 +986,7 @@ Applying: The commit summary here</code></pre>
                             <h3>First, <strong class="green">rewinds HEAD</strong> to the <strong>common
                                 ancestor</strong>.</h3>
 
-                            <img src="/images/rebase-02-alt.svg" class="fragment">
+                            <img src="images/rebase-02-alt.svg" class="fragment">
                         </section>
 
                         <section data-transition="convex-in fade-out">
@@ -995,7 +995,7 @@ Applying: The commit summary here</code></pre>
                                 <strong class="orange">master</strong>.
                             </h3>
 
-                            <img src="/images/rebase-03-alt.svg" class="fragment"/>
+                            <img src="images/rebase-03-alt.svg" class="fragment"/>
 
                             <aside class="notes">
                                 <p>
@@ -1012,7 +1012,7 @@ Applying: The commit summary here</code></pre>
                                 The result is a cleaner, linear history.
                             </h3>
 
-                            <img src="/images/rebase-04-alt.svg" class="fragment"/>
+                            <img src="images/rebase-04-alt.svg" class="fragment"/>
                         </section>
 
                         <section>
@@ -1031,7 +1031,7 @@ Applying: The commit summary here</code></pre>
                                 A fast-forward.
                             </h2>
 
-                            <img src="/images/rebase-05.svg" class="fragment"/>
+                            <img src="images/rebase-05.svg" class="fragment"/>
                         </section>
 
 
@@ -1049,7 +1049,7 @@ Applying: The commit summary here</code></pre>
                             <strong class="orange">origin/master</strong> branch and the <strong>remote</strong>'s <strong class="orange">master</strong> branch are the same.
                         </p>
 
-                        <img src="/images/push-01.svg" class="fragment"/>
+                        <img src="images/push-01.svg" class="fragment"/>
 
                         <p class="fragment">
                             But we have new local commits waiting to be pushed.
@@ -1069,7 +1069,7 @@ ef29a87..ae798ab  master -> master</code></pre>
 
                     <section>
                         <p>Now the remote is up to date with our changes</p>
-                        <img src="/images/push-02.svg"/>
+                        <img src="images/push-02.svg"/>
                     </section>
 
 
@@ -1082,13 +1082,13 @@ ef29a87..ae798ab  master -> master</code></pre>
                                 <p>$ git <span class="green">push</span> <strong class="red">--force</strong></p>
                             </div>
 
-                            <img src="/images/git_push_--force.gif" class="fragment"/>
+                            <img src="images/git_push_--force.gif" class="fragment"/>
                         </section>
 
                         <section>
                             <h3>A new situation</h3>
 
-                            <img src="/images/push--force-01.svg" class="fragment"/>
+                            <img src="images/push--force-01.svg" class="fragment"/>
 
                             <p class="fragment">
                                 We will rebase <strong class="orange">master</strong> from <strong class="orange">ticket</strong>
@@ -1096,7 +1096,7 @@ ef29a87..ae798ab  master -> master</code></pre>
                         </section>
 
                         <section>
-                            <img src="/images/push--force-02.svg"/>
+                            <img src="images/push--force-02.svg"/>
 
                             <aside class="notes">
                                 <p>
@@ -1129,7 +1129,7 @@ ef29a87..ae798ab  master -> master</code></pre>
                     </section>
 
                     <section>
-                        <img src="/images/push--force-03.svg"/>
+                        <img src="images/push--force-03.svg"/>
                     </section>
                 </section>
 
@@ -1232,12 +1232,12 @@ To git@github.com:user/repo.git
                 <section>
                     <h1>Questions?</h1>
 
-                    <img src="/images/scrubs-head-explode-o.gif"/>
+                    <img src="images/scrubs-head-explode-o.gif"/>
                 </section>
 
                 <section>
                     <h1>Thanks!</h1>
-                    <img src="/images/bye.jpg"/>
+                    <img src="images/bye.jpg"/>
                 </section>
 
             </div>
